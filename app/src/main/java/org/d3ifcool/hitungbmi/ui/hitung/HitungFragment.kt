@@ -41,7 +41,7 @@ class HitungFragment : Fragment() {
                 .actionHitungFragmentToSaranFragment(it))
             viewModel.selesaiNavigasi()
         })
-        
+
         viewModel.getHasilBmi().observe(viewLifecycleOwner, {
             if (it == null) return@observe
             binding.bmiTextView.text = getString(R.string.bmi_x, it.bmi)
